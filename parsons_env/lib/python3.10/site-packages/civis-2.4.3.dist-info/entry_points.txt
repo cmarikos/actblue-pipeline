@@ -1,0 +1,3 @@
+[console_scripts]
+civis = civis.cli.__main__:main
+civis_joblib_worker = civis.run_joblib_func:main
