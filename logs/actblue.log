@@ -31,3 +31,696 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 📥 Retrieved 481 donations from ActBlue.
 [{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
 ✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-33c44aa3-b1f6-4535-abb7-3925b4c56989;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 209ms :: artifacts dl 5ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-33c44aa3-b1f6-4535-abb7-3925b4c56989
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/13ms)
+25/07/23 08:00:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/23 08:00:20 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8][Stage 0:============================================>              (6 + 2) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-51968ac9-7e6e-4b1c-a3b7-035e4dbc2752;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 248ms :: artifacts dl 6ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-51968ac9-7e6e-4b1c-a3b7-035e4dbc2752
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/13ms)
+25/07/23 10:00:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/23 10:00:42 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-1101e064-a865-4f16-ab23-13baaa4e5505;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 201ms :: artifacts dl 5ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-1101e064-a865-4f16-ab23-13baaa4e5505
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/6ms)
+25/07/23 11:00:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/23 11:00:20 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-adae09a3-7e58-4dbd-96a3-0d9916da1196;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 327ms :: artifacts dl 5ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-adae09a3-7e58-4dbd-96a3-0d9916da1196
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/15ms)
+25/07/23 12:00:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/23 12:00:24 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8][Stage 0:=============================>                             (4 + 4) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-4ff56d16-c2b5-4e38-9468-7b9d1f5b6e03;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 226ms :: artifacts dl 4ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-4ff56d16-c2b5-4e38-9468-7b9d1f5b6e03
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/5ms)
+25/07/23 13:00:15 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/23 13:00:24 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-232c5378-e49e-4b6e-884f-09db61c2b7ff;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 222ms :: artifacts dl 4ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-232c5378-e49e-4b6e-884f-09db61c2b7ff
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/12ms)
+25/07/23 14:00:14 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/23 14:00:22 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8][Stage 0:=======>                                                   (1 + 7) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-cdb7a724-e5f0-4b7f-a3d5-a641a3d56fe6;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 263ms :: artifacts dl 5ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-cdb7a724-e5f0-4b7f-a3d5-a641a3d56fe6
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/7ms)
+25/07/23 15:00:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/23 15:00:21 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 0) / 8][Stage 0:>                                                          (0 + 8) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-9a6c0954-aed1-458c-bbda-6fa2c58971e3;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 241ms :: artifacts dl 4ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-9a6c0954-aed1-458c-bbda-6fa2c58971e3
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/25ms)
+25/07/23 16:00:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/23 16:00:24 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8][Stage 0:============================================>              (6 + 2) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-fa0b1ccf-d188-4d71-87a5-85c7e635aa40;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 202ms :: artifacts dl 4ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-fa0b1ccf-d188-4d71-87a5-85c7e635aa40
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/13ms)
+25/07/23 17:00:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/23 17:00:20 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-10f246a4-e2dd-4c52-be95-2fa128b63c7c;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 237ms :: artifacts dl 4ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-10f246a4-e2dd-4c52-be95-2fa128b63c7c
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/13ms)
+25/07/23 18:00:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/23 18:00:20 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8][Stage 0:===========================================================(8 + 0) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-469e5584-ac5f-4c30-9eef-6db1b721f212;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 208ms :: artifacts dl 5ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-469e5584-ac5f-4c30-9eef-6db1b721f212
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/13ms)
+25/07/24 09:00:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/24 09:00:23 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8][Stage 0:====================================>                      (5 + 3) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-edcfb178-0c20-45c4-b742-8d37b7f0c05a;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 225ms :: artifacts dl 5ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-edcfb178-0c20-45c4-b742-8d37b7f0c05a
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/5ms)
+25/07/24 10:00:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/24 10:00:23 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8][Stage 0:=======>                                                   (1 + 7) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-a76a4bed-ad64-418f-8963-57f6f157e67b;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 249ms :: artifacts dl 4ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-a76a4bed-ad64-418f-8963-57f6f157e67b
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/16ms)
+25/07/24 11:00:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/24 11:00:26 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-235bc5d4-5425-4e47-a777-7ff92d688e43;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 296ms :: artifacts dl 6ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-235bc5d4-5425-4e47-a777-7ff92d688e43
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/13ms)
+25/07/24 13:00:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/24 13:00:33 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-eca31edb-394c-4756-bfdb-5e9b153440af;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 851ms :: artifacts dl 24ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-eca31edb-394c-4756-bfdb-5e9b153440af
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/6ms)
+25/07/24 14:00:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/24 14:00:48 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-9992d634-c6dc-4bd3-b1ed-466c5d84e545;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 244ms :: artifacts dl 14ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-9992d634-c6dc-4bd3-b1ed-466c5d84e545
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/7ms)
+25/07/24 15:00:15 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/24 15:00:23 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-ce27396d-7f75-4c30-b0bd-ed8bd1d8d08f;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 237ms :: artifacts dl 5ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-ce27396d-7f75-4c30-b0bd-ed8bd1d8d08f
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/13ms)
+25/07/24 16:00:18 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/24 16:00:26 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8][Stage 0:======================>                                    (3 + 5) / 8][Stage 0:====================================>                      (5 + 3) / 8][Stage 0:============================================>              (6 + 2) / 8][Stage 0:===================================================>       (7 + 1) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-55d53093-860f-4701-bb78-af694c7833b3;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 242ms :: artifacts dl 7ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-55d53093-860f-4701-bb78-af694c7833b3
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/6ms)
+25/07/24 17:00:15 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/24 17:00:24 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-6bb1d5c5-aded-4881-81ca-667f19b158bc;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 221ms :: artifacts dl 4ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-6bb1d5c5-aded-4881-81ca-667f19b158bc
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/13ms)
+25/07/24 18:00:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/24 18:00:20 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-fd7008e3-ba58-4e04-bc49-c740cdd4cfd1;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 233ms :: artifacts dl 4ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-fd7008e3-ba58-4e04-bc49-c740cdd4cfd1
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/13ms)
+25/07/24 19:00:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/24 19:00:24 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
+actblue INFO Requesting paid_contributions from 2025-01-01 up to 2025-06-01.
+actblue INFO Request received. Please wait while ActBlue generates this data.
+actblue INFO Completed data generation.
+actblue INFO Beginning conversion to Parsons Table.
+actblue INFO Completed conversion to Parsons Table.
+:: loading settings :: url = jar:file:/Users/cmarikos/spark-3.5.4-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/cmarikos/.ivy2/cache
+The jars for the packages stored in: /Users/cmarikos/.ivy2/jars
+com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-7c52467c-7ade-4a38-8c74-3e53d15070c3;1.0
+	confs: [default]
+	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 in central
+:: resolution report :: resolve 208ms :: artifacts dl 4ms
+	:: modules in use:
+	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.32.2 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   1   |   0   |   0   |   0   ||   1   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-7c52467c-7ade-4a38-8c74-3e53d15070c3
+	confs: [default]
+	0 artifacts copied, 1 already retrieved (0kB/13ms)
+25/07/24 20:00:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/07/24 20:00:20 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 8) / 8][Stage 0:=======>                                                   (1 + 7) / 8]                                                                                ✅ Loaded .env
+🔐 Using credentials from: /Users/cmarikos/pyspark/razea/actblue-pipeline/secrets/spark-bigquery-sa.json
+📥 Retrieved 481 donations from ActBlue.
+[{'Receipt ID': 'AB266200948', 'Date': '2025-01-06 03:20:00', 'Amount': '2.00', 'Recurring Total Months': 'unlimited', 'Recurrence Number': '16', 'Recipient': 'Rural Arizona Engagement', 'Fundraising Page': 'https://secure.actblue.com/page/rural-arizona-engagement-1', 'Fundraising Partner': '', 'Reference Code 2': '', 'Reference Code': '', 'Donor First Name': 'Jonah', 'Donor Last Name': 'Rank', 'Donor Addr1': '1 Hemlock Drive', 'Donor Addr2': '', 'Donor City': 'Natick', 'Donor State': 'MA', 'Donor ZIP': '01760', 'Donor Country': 'United States', 'Donor Occupation': 'Education Director', 'Donor Employer': 'Kehilat HaNahar', 'Donor Email': 'jonah.rank@gmail.com', 'Donor Phone': '2673181811', 'New Express Signup': 'f', 'Comments': '', 'Check Number': '401509040', 'Check Date': '2025-01-31', 'Employer Addr1': '85 W. Mechanic St.', 'Employer Addr2': '', 'Employer City': 'New Hope', 'Employer State': 'PA', 'Employer ZIP': '18938', 'Employer Country': 'United States', 'Donor ID': '', 'Fundraiser ID': '', 'Fundraiser Recipient ID': 'rural-arizona-engagement-1', 'Fundraiser Contact Email': '', 'Fundraiser Contact First Name': '', 'Fundraiser Contact Last Name': '', 'Partner ID': '', 'Partner Contact Email': '', 'Partner Contact First Name': '', 'Partner Contact Last Name': '', 'Reserved': '', 'Lineitem ID': '683495254', 'AB Test Name': '', 'AB Variation': '', 'Recipient Committee': 'Rural Arizona Engagement', 'Recipient ID': '97024', 'Recipient Gov ID': '83-3114207', 'Recipient Election': '', 'Payment ID': '430328065', 'Payment Date': '2025-01-06 00:00:00', 'Disbursement ID': '2532251', 'Disbursement Date': '2025-01-31 00:00:00', 'Recovery ID': '', 'Recovery Date': '', 'Refund ID': '', 'Refund Date': '', 'Fee': '0.08', 'Recur Weekly': '', 'ActBlue Express Lane': '', 'Card Type': 'VISA', 'Mobile': '', 'Recurring Upsell Shown': '', 'Recurring Upsell Succeeded': '', 'Double Down': '', 'Smart Recurring': '', 'Monthly Recurring Amount': '2.00', 'Apple Pay': '', 'Card Replaced by Account Updater': '', 'ActBlue Express Donor': 't', 'Custom Field 1 Label': '', 'Custom Field 1 Value': '', 'Donor US Passport Number': '', 'Text Message Opt In': 'unknown', 'Gift Identifier': '', 'Gift Declined': '', 'Shipping Addr1': '', 'Shipping City': '', 'Shipping State': '', 'Shipping Zip': '', 'Shipping Country': '', 'Weekly Recurring Amount': '', 'Smart Boost Amount': '', 'Smart Boost Shown': '', 'Bump Recurring Seen': 'f', 'Bump Recurring Succeeded': 'f', 'Weekly to Monthly Rollover Date': '', 'Weekly Recurring Sunset': '', 'Recurring Type': 'forever', 'Recurring Pledged': 'forever', 'Paypal': '', 'Kind': 'page', 'Managed Entity Name': 'Rural Arizona Engagement', 'Managed Entity Committee Name': 'Rural Arizona Engagement'}]
+✅ Wrote to BigQuery via Spark
