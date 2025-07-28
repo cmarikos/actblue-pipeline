@@ -1,7 +1,5 @@
 # actblue-pipeline
 
-![[Screenshot 2025-07-24 at 1.48.40 PM.png]]
-
 
 
 **(Parsons fetch → Spark load → BigQuery table)**
