@@ -34,7 +34,7 @@ def main(event, context):
     print(f"📥 Retrieved {len(rows)} donations from ActBlue.")
     print(rows[:1])
 
-    # 3) Pandas -> clean headers
+    # 3) Pandas clean headers add date
     df_pd = pd.DataFrame(rows)
     df_pd.columns = [clean_col(c) for c in df_pd.columns]
     if "reserved" in df_pd.columns:
