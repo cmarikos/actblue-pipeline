@@ -294,7 +294,7 @@ crontab -l
 ```
 
 
-Cron is a built-in scheduler on your Mac.
+Cron is a built-in scheduler - KNOWN ISSUE currently not running correctly will work on this soon
 
 * The little `run_actblue.sh` script is what cron calls.
 * `chmod +x` just makes the script runnable.
