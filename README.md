@@ -226,7 +226,7 @@ if __name__ == "__main__":
 
 ---
 
-## 6. Local Execution
+## 6. Local Execution - There are known issues here (really should schedule this in the cron scheduler in BQ, probably should ignore from here down)
 
 ### 6.1 One-off manual run
 
