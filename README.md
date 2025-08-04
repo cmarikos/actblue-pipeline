@@ -349,7 +349,7 @@ Keep an eye on it! Check the log file now and then. If you want an email when it
 | receipt\_id  | STRING    | ActBlue CSV | Unique receipt per donation | AB266200948                       |
 | date         | TIMESTAMP | ActBlue CSV | Donation datetime           | 2025-01-06 03:20:00               |
 | amount       | NUMERIC   | ActBlue CSV | Contribution amount (USD)   | 2.00                              |
-| donor\_email | STRING    | ActBlue CSV | Contributor’s email         | [foo@bar.com](mailto:foo@bar.com) |
+| donor\_email | STRING    | ActBlue CSV | Contributor’s email         | [test@test.com](mailto:test@test.com) |
 | …            | …         | …           | …                           | …                                 |
 
 Maintain this in a Sheet or Markdown for clarity. (Original CSV headers have spaces; Spark lowers none unless we do. Consider normalizing column names before write.)
